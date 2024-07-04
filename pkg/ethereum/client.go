@@ -96,7 +96,6 @@ func sendRequest(request JSONRPCRequest) (*JSONRPCResponse, error) {
 }
 
 func hexToInt(hex string) (int, error) {
-	// Ensure the hex string has the "0x" prefix
 	hex = strings.TrimPrefix(hex, "0x")
 	result, err := strconv.ParseInt(hex, 16, 64)
 	if err != nil {

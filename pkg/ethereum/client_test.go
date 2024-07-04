@@ -8,7 +8,6 @@ import (
 )
 
 func TestDefaultEthereumClient(t *testing.T) {
-	// Create a mock server
 	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		var response JSONRPCResponse
 		if r.Method == "POST" {
@@ -43,7 +42,6 @@ func TestDefaultEthereumClient(t *testing.T) {
 	}))
 	defer server.Close()
 
-	// Use the test server's URL instead of the real Ethereum node
 	originalEndpoint := ethereumRPCEndpoint
 	ethereumRPCEndpoint = server.URL
 	defer func() { ethereumRPCEndpoint = originalEndpoint }()

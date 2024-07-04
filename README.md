@@ -6,13 +6,13 @@ This application implements an Ethereum blockchain parser that allows querying t
 
 ### Prerequisites
 
-- Go 1.15 or higher
+- Go 1.22
 
 ### Installation
 
 1. Clone the repository:
    `git clone https://github.com/oseifrimpong/ethereum-parser.git`
-2. cd ethereum-blockchain-parser
+2. cd ethereum-parser
 3. Install dependencies (if any): `go mod tidy`
 
 ### Running the Application
